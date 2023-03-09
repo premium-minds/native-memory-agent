@@ -15,11 +15,11 @@ public class MetricConverter {
 	public List<String> toStatsD(Memory memory){
 		String metric = "jvm.nmt." + memory.name.toLowerCase().replace(" ", "_");
 		if (tags == null || tags.isEmpty()){
-			return Arrays.asList(metric + ".reserved:" + memory.reserved + "|c",
-								 metric + ".committed:" + memory.committed + "|c");
+			return Arrays.asList(metric + ".reserved:" + memory.reserved + "|g",
+								 metric + ".committed:" + memory.committed + "|g");
 		} else {
-			return Arrays.asList(metric + ".reserved:" + memory.reserved + "|c|#" + tags,
-								 metric + ".committed:" + memory.committed + "|c|#"+ tags);
+			return Arrays.asList(metric + ".reserved:" + memory.reserved + "|g|#" + tags,
+								 metric + ".committed:" + memory.committed + "|g|#"+ tags);
 		}
 	}
 
