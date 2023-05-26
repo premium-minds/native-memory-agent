@@ -16,7 +16,7 @@ wget https://docs.oracle.com/javase/tutorial/networking/sockets/examples/EchoSer
 nc -l -u -p 8125
 java -javaagent:target/native-memory-agent-1.0-SNAPSHOT.jar=localhost:8125,foo=bar \
   -XX:NativeMemoryTracking=summary \
-  EchoServer.java
+  EchoServer.java 8080
 ```
 
 
