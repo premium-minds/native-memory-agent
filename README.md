@@ -8,6 +8,12 @@ Java agent to send native memory metrics to Stats
 mvn clean package
 ```
 
+## Release
+
+```shell
+/opt/maven/apache-maven-3.9.2/bin/mvn release:prepare
+/opt/maven/apache-maven-3.9.2/bin/mvn release:perform -Darguments="-Dmaven.deploy.skip=true"
+```
 
 ## Usage
 
