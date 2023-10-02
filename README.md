@@ -25,6 +25,7 @@ java -javaagent:target/native-memory-agent-1.0.jar=localhost:8125,foo=bar \
   EchoServer.java 8080
 ```
 
+ * `-XX:NativeMemoryTracking=summary` or `-XX:NativeMemoryTracking=detail` is required to active native memory tracking
  * `localhost:8125` is the address for a UDP StatsD server
  * `foo=bar` are tags to be sent along with metrics, delimted by a comma
 
